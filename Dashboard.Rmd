@@ -1,0 +1,94 @@
+---
+title: "PigPeaks dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    #vertical_layout: fill 
+    vertical_layout: scroll
+    social: menu
+    orientation: rows
+---
+
+```{r message=FALSE, warning=FALSE}
+library(flexdashboard)
+library(plotly)
+library(stringr)
+
+source('Definitions.r')
+source('Dashboard.R')
+
+load("dashboard.plots.RData")
+
+
+
+
+```
+
+
+Services
+====================================
+
+
+Row
+-------------------------------------
+### Services
+```{r}
+services.plot
+```
+
+### Reservices 
+```{r}
+reservices.plot
+```
+
+
+
+
+Farrowing
+====================================
+
+Row
+-------------------------------------
+
+### Days between farrowings (last 400 farrowings)
+```{r}
+days.between.farrowings.plot
+
+```
+
+
+
+
+Small piglets
+====================================
+
+Row
+-------------------------------------
+
+### Mortality during the TILLVÄXT period
+```{r}
+tillvaxt.mortality
+
+```
+
+
+
+
+
+Mortality in SOWS
+====================================
+
+
+Row
+-------------------------------------
+
+### Number of deaths per week
+```{r}
+number.deaths.week.plot
+
+```
+
+
+
+
+
+
