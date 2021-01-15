@@ -150,8 +150,8 @@ create.nonTS.timeto <- function(parity.matrix=individual.sows$parity,
   matrix.timeto <- matrix(NA,nrow=1,ncol=4)
   colnames(matrix.timeto)<- c(col1,col2,col3,"sowINDEX")
   
-  for (r in 2:dim(index.dates)[1]){
-    for (s in 1:length(parity.matrix)){
+  for (r in 2:length(index.dates)){
+    for (s in 1:dim(parity.matrix)[2]){
       
       if (!is.na(event2.matrix[r,s])&
           event2.matrix[r,s]==event2.value){

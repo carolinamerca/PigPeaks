@@ -368,12 +368,12 @@ for (d in 8:total.date.rows){ #3295
 
 
 
-for (s in 1:dim(individual.sows)[3]){
+for (s in 1:dim(individual.sows[[1]])[2]){
   
   if(!all(is.na(individual.sows$parity[,s]))){ 
     
     first.parity <- min(which(!is.na(individual.sows$parity[,s])))
-    exit.day <- dim(individual.sows)[1]
+    exit.day <- dim(individual.sows[[1]])[1]
     if(length(which(individual.sows$exit[,s]==1))>0){
       exit.day <-min(which(individual.sows$exit[,s]==1))
     }

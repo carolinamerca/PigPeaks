@@ -84,8 +84,8 @@ piglets.deaths.week <- v$counts
 
 
 # deaths ----
-number.deaths.days <- create.counts.days(data.matrix="death")
-number.deaths.week <- create.counts.week(data.matrix="death")
+number.deaths.days <- create.counts.days(data.matrix=individual.sows$death)
+number.deaths.week <- create.counts.week(data.matrix=individual.sows$death)
 
 
 

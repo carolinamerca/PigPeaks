@@ -80,7 +80,7 @@ tillvaxt.mortality <- TS.barplot(series = piglets.deaths.week,
                                  indicator.label="Mortality in small piglets (TILLVÄXT)",
                                  show.window = weeks.to.show*2,
                                  index.dates = index.dates.week,
-                                 ylabel = 'Number of sows',
+                                 ylabel = 'piglets dead',
                                  xlabel = 'Week',
                                  target.vector = NULL,
                                  shading.matrix = NULL,
@@ -111,3 +111,4 @@ save(services.plot,
      number.deaths.week.plot,
      days.between.farrowings.plot,
      file="dashboard.plots.RData")
+
