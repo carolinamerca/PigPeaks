@@ -14,7 +14,7 @@ library(plotly)
 library(stringr)
 
 source('Definitions.r')
-source('Dashboard.R')
+#source('Dashboard.R')
 
 load("dashboard.plots.RData")
 

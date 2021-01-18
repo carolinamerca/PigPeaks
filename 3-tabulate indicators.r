@@ -8,8 +8,8 @@ library(abind)
 
 #source("Definitions.r")
 #source("Functions.r")
-#load("individual.sows.RData")
-#load("animal.RData")
+load("individual.sows.RData")
+load("animal.RData")
 #load("1RETRO-data.RData")
 
 
