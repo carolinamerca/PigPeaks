@@ -1,6 +1,6 @@
 #source('Definitions.r')
 #source('Functions.r')
-#source('1-fetch_data.r')
+#source('1-fetch data.r')
 
 # Week1 ----
 for (d in 1:7){
@@ -28,7 +28,7 @@ for (d in 1:7){
   
   day.events <- list()
   
-  for(event in sow.events){
+  for(event in sow.events){ #event<-sow.events[1]
     event.dataset <- get(event)
     event.rows <- which(event.dataset$EventDate==date.today)
     
@@ -113,7 +113,7 @@ for (d in 1:7){
       sowID <- day.events$abortion[r,"AnimalId"]
       sow.dim <- which(colnames(individual.sows[[1]])==sowID)
       individual.sows$abortion[date.row,sow.dim]<-1
-      individual.sows$abortion[date.row,sow.dim]<-1
+      individual.sows$status[date.row,sow.dim]<-1
     }
   }
   

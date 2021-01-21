@@ -9,7 +9,7 @@ reservice.threshold <- 90
 reservice.perc.window <- 4 #(weeks)
 
 empty.days.target <- 4
-opendays.target <- 4
+#opendays.target <- 4
 
 plot.years=2
 baseline.years=3
