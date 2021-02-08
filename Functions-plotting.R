@@ -654,22 +654,22 @@ nonTS.barplot.pg.timeless <- function(series = indicator.series,
               "<br>",indicator.label,":",y1,
               "<br>Week:",date2ISOweek(series.pg[[1]][,"x.dates"]),
               "<br>date:",series.pg[[1]][,"x.dates"],
-              "<br>sowID:",active.sows.displayID[match(dimnames(individual.sows)[[3]][series.pg[[1]][,"sowINDEX"]],active.sows.displayID[,"codesID"]),"displayID"])
+              "<br>sowID:",active.sows.displayID[match(dimnames(individual.sows[[1]])[[2]][series.pg[[1]][,"sowINDEX"]],active.sows.displayID[,"codesID"]),"displayID"])
   text2=str_c("Parity group:",t2,
               "<br>",indicator.label,":",y2,
               "<br>Week:",date2ISOweek(series.pg[[2]][,"x.dates"]),
               "<br>date:",series.pg[[2]][,"x.dates"],
-              "<br>sowID:",active.sows.displayID[match(dimnames(individual.sows)[[3]][series.pg[[2]][,"sowINDEX"]],active.sows.displayID[,"codesID"]),"displayID"])
+              "<br>sowID:",active.sows.displayID[match(dimnames(individual.sows[[1]])[[2]][series.pg[[2]][,"sowINDEX"]],active.sows.displayID[,"codesID"]),"displayID"])
   text3=str_c("Parity group:",t3,
               "<br>",indicator.label,":",y3,
               "<br>Week:",date2ISOweek(series.pg[[3]][,"x.dates"]),
               "<br>date:",series.pg[[3]][,"x.dates"],
-              "<br>sowID:",active.sows.displayID[match(dimnames(individual.sows)[[3]][series.pg[[3]][,"sowINDEX"]],active.sows.displayID[,"codesID"]),"displayID"])
+              "<br>sowID:",active.sows.displayID[match(dimnames(individual.sows[[1]])[[2]][series.pg[[3]][,"sowINDEX"]],active.sows.displayID[,"codesID"]),"displayID"])
   text4=str_c("Parity group:",t4,
               "<br>",indicator.label,":",y4,
               "<br>Week:",date2ISOweek(series.pg[[4]][,"x.dates"]),
               "<br>date:",series.pg[[4]][,"x.dates"],
-              "<br>sowID:",active.sows.displayID[match(dimnames(individual.sows)[[3]][series.pg[[4]][,"sowINDEX"]],active.sows.displayID[,"codesID"]),"displayID"])
+              "<br>sowID:",active.sows.displayID[match(dimnames(individual.sows[[1]])[[2]][series.pg[[4]][,"sowINDEX"]],active.sows.displayID[,"codesID"]),"displayID"])
   
   
   
@@ -1541,3 +1541,4 @@ TS.barplot.pg.ewma <- function(series = series.pg,
            legend=list(orientation="h",
                        x=0.25,y=max(y,na.rm=T)))
 }
+

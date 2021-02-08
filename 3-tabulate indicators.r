@@ -73,12 +73,11 @@ if(dim(progeny.dead)[1]>1){
   }
 }
 
-t <- data.frame(year=index.dates.days$year,
-                week=index.dates.days$week,
-                counts=piglets.deaths.days)
-v <- aggregate(t,by=list(t$year,t$week),FUN=sum)
-piglets.deaths.week <- v$counts
 
+t <- data.frame(ISOweek=as.factor(str_sub(index.dates.days$ISOweek,1,8)),
+                counts=piglets.deaths.days)
+v <- aggregate(t$counts,by=list(t$ISOweek),FUN=sum)
+piglets.deaths.week <- v$x
 
 
 
